@@ -25,6 +25,7 @@
          <th>Bug</th>
          <th>Title</th>
          <th>Last Updated</th>
+         <th>Assigned</th>
          <th>People</th>
          <th>Last actor</th>
          <th>State</th>
@@ -67,6 +68,9 @@
              </td>
              <td><time am-time-ago="pull.updated_at"></time>
              </td>
+            <td>
+                    <img ng-src="{{ pull.assignee.avatar_url }}" class="avatar" alt="{{ pull.assignee.avatar_url }}">
+            </td>
              <td>
                  <a ng-repeat="user in uniqueUsers(pull)"
                     href="{{ user.html_url }}" target="_blank" title="{{ user.login }}">
